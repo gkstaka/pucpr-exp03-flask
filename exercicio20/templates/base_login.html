@@ -1,0 +1,43 @@
+<!-- base_login.html -->
+<html>
+	<head>
+		{% block title %}<title>Minha Casa</title>{% endblock %}
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="static/css/style.css" />
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=IoAAAqgXlTr2HQGpm3dz2cEmLM1wmuYxWnalegA2iFICi7p376Dc7hNYFZXOXR4tO2Tfye3x-Qq6rsybQk3EMAOfyQzvh9rQX8-j7G9KMW11RCHlWYLjgTvfK4gzqOMbeddP__Bv7Qrw4AgfJEvk6N1ns_PAfRvsRZH89ZspheFbcV3H1S0U6q4YEd1IZHxMuC8CHkXg7ouun9224PpS84Qy0qvWiIOVVKPYe3vgeYsZ26XC-HqxI0pq7zPAKp25SezKjcaV7kp3SyRNWWx77zWNRs4R_QWWfpqXEZhlseEIvvCYwijiH6N7gEai8Gye2DS1GZAf-M9igp__Vz6aC6ArtB3RO168KVLDEsCERjcPpKXPw_LSs1uHWBLVTI9NITRQ-UEvr_T8kLfbYvdwmfpadxXFkzKjK5ihJ2I4b9JgNsZ_mDMD7iN4DcGm4_W6bmJCY5_PbSi3IhGjt7YndEush4QzifvobRgyofN73VuxpL1dc5Xb0x77F1SgTMcq2lTb4FUCT2SuMXVHQasfKligMuar3Gc5Rg1SZ0zeJrzguOeTPn0JQcVyQbo0YcRwAT7O0vAAH-PDGp5xICZ9vyKaJ9hvnvz3Ua5ZnaO4hCzu7MYqNBSy3pIafvl4p3omoScYtGKWiE_mA3PW6mTTAZ0IpAcMPtpgjAg0F17Y8yg" charset="UTF-8"></script></head>
+	
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">
+				<img src="static/img/170781.jpg" width="60" height="60" alt="">
+			</a>
+			<body>
+				<form action = "http://localhost/validate_user" method = "post">
+					<style scoped>.whiteText {color:white;}
+					</style>
+					<p class="whiteText">Usuário:</p>
+				   <p><input type = "text" name = "user"  placeholder="User"  required/></p>
+				   <style scoped>.whiteText {color:white;}
+					</style>
+					<p class="whiteText">Senha:</p>
+				   <p><input type = "text" name = "password" placeholder="Password" required/></p>
+				   <p><input type = "submit" value = "Entrar" /></p>
+				</form>   
+			 </body>
+		</nav>
+		<div id="content">
+			{% block content %} {% endblock %}
+		</div>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	
+	</html>

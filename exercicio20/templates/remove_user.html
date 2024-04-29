@@ -1,0 +1,12 @@
+{% extends "dictionary.html" %} {% block dict %}
+<h2>Deletar usuario</h2>
+<form action="{{ url_for('del_user')}}" method="post">
+    <select name="user" class="Input">
+        {% for key, value in dictionary.items() %}
+        <option>{{ key }}</option>
+        {% endfor %}
+        <p><input type="submit" value="Deletar" /></p>
+    </select>
+</form>
+
+{% endblock dict %}
