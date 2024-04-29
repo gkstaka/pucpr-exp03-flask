@@ -1,0 +1,6 @@
+{% extends "dictionary.html" %}
+{% block dict %}
+{% for key, value in dictionary.items()  %}
+    <li>{{ key }}: {{ value }}</li>
+ {% endfor %} 
+{% endblock dict %}

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Minha casa</title>
+    </head>
+
+    <body>
+        <h2>Quarto</h2>
+        <ul>
+            {% for k, v in devices.items() %}
+            <li><a href={{v}}>{{k}}</a></li>
+            {% endfor %}
+        </ul>
+
+        <a href="/">
+            <p>Voltar para pagina inicial</p>
+        </a>
+    </body>
+</html>

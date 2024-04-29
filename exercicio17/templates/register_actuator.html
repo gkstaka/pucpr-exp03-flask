@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block content %}
+
+<h2>Registrar atuador</h2>
+<form action="/register_actuator_form" method="post">
+    <p>
+        <input
+            type="text"
+            name="actuator"
+            id="actuator"
+            placeholder="Atuador"
+            required />
+    </p>
+    <p>
+        <input
+            type="text"
+            name="state"
+            id="state"
+            placeholder="Estado"
+            required />
+    </p>
+    <input type="submit" value="Cadastrar" />
+    <br />
+    <br>
+    <a href="/home">Retornar para pagina inicial</a>
+</form>
+
+{% endblock content %}

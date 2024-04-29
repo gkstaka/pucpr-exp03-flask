@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Acesse o menu:</h3>
+<ul>
+    {% for k, v in rooms.items() %}
+    <li><a href="{{v}}">{{k}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock content %}

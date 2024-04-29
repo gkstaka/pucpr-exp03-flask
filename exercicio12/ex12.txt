@@ -1,0 +1,29 @@
+Descreva resumidamente como cada um dos seguintes métodos funcionam? Exemplifique como a solicitação deve ser realizada e como ocorre a resposta. Por fim, realize uma comparação entre os métodos.
+
+GET: 
+O método get solicita a representação de um recurso específico. É um pedido ao servidor para mostrar uma página ou documento.
+Exemplo: "GET /index.html HTTP/1.1 Host: www.exemplo.com" retorna o conteúdo do index.html junto com o status 200 OK caso tenha sucedido.
+
+POST:
+O método post envia dados ao servidor para criar ou processar informações em um recurso específico.
+Ex: "POST /envia-form /HTTP/1.1 Host: www.exemplo.com" Content-Type: application/x-www-form-urlencoded Content-Length: 27 name=John&age=30" processa os dados e retorna um status HTTP, como 201 CREATED se sucedido ou 400 BAD REQUEST se houve um erro
+
+PUT: Atualiza ou substitui completamente um recurso existente com os dados fornecidos.
+Ex:  "PUT /users/123 HTTP/1.1 Host: www.exemplo.com Content-Type: application/json { "nome": "Joao", "idade": 30 }" atualiza o recurso e responde com 200 OK ou 204 NO CONTENT.
+
+DELETE: Remove um recurso em específico.
+Ex: "DELETE /users/123 HTTP/1.1 Host: www.exemplo.com" deleta o recurso e geralmente retorna com 200 OK ou 204 NO CONTENT.
+
+HEAD: Solicita somente os cabeçalhos que seriam retornados como parte do método GET. Não retorna corpo do documento.
+Ex: "HEAD /index.html HTTP/1.1 Host: www.exemplo.com" retorna somente o cabeçalho HTTP, sem corpo, com um status como 200 OK.
+
+TRACE: Executa um teste de loop-back junto com o caminho para o recurso de destino. Serve para fazer um diagnóstico.
+Ex: "TRACE / HTTP/1.1 Host: www.exemplo.com" retorna a solicitação recebida como corpo da mensagem.
+
+OPTIONS: Usado para descrever as opções de comunicação com o recurso de destino, como quais métodos HTTP são permitidos.
+Ex: "OPTIONS /index.html HTTP/1.1 Host: www.exemplo.com" responde com os métodos HTTP permitidos para o recurso especificado. 
+
+CONNECT: O método estabelece um túnel para o servidor identificado pelo recurso de destino.
+Ex: "CONNECT www.example.com:443 HTTP/1.1" confirma a conexão ao túnel, geralmente com um status 200 OK.
+
+Referência: https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods

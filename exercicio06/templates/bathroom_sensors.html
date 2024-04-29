@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Minha casa</title>
+    </head>
+
+    <body>
+        <h2>Sensores</h2>
+        <ul>
+            {% for sensor in sensores %}
+            <li>{{sensor}}</li>
+
+            {% endfor %}
+        </ul>
+        <p>Voltar para o <a href="/bathroom">banheiro</a></p>
+        <a href="/">
+            <p>Voltar para pagina inicial</p>
+        </a>
+    </body>
+</html>

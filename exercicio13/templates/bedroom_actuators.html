@@ -1,0 +1,14 @@
+{% extends "devices.html" %} 
+{% block content %}
+<h2>Atuadores</h2>
+<ul>
+    {% for k, v in actuators.items() %}
+    <li>{{ k }}: {{ v }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
+
+{% block comodo %}
+quarto
+{% endblock comodo %}

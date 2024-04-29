@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block content %}
+
+<h2>Registrar sensor</h2>
+<form action="/register_sensor_form" method="post">
+    <p>
+        <input
+            type="text"
+            name="sensor"
+            id="sensor"
+            placeholder="Sensor"
+            required />
+    </p>
+    <p>
+        <input
+            type="text"
+            name="reading"
+            id="reading"
+            placeholder="Leitura"
+            required />
+    </p>
+    <input type="submit" value="Cadastrar" />
+    <br />
+    <br>
+    <a href="/home">Retornar para pagina inicial</a>
+</form>
+
+{% endblock content %}

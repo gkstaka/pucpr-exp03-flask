@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block content %}
+
+<h2>Registrar usuario</h2>
+<form action="/register_user_form" method="post">
+    <p>
+        <input
+            type="text"
+            name="user"
+            id="user"
+            placeholder="Usuario"
+            required />
+    </p>
+    <p>
+        <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Senha"
+            required />
+    </p>
+    <input type="submit" value="Cadastrar" />
+    <br />
+    <br>
+    <a href="/home">Retornar para pagina inicial</a>
+</form>
+
+{% endblock content %}
