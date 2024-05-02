@@ -23,7 +23,8 @@
                             <p>{{ key }}</p>
                             <a href="/edit_sensor?name={{key}}">Editar</a>
                         </td>
-                        <td>{{ value }}</td>
+                        <td><p>{{ value }}</p><a href="/edit_reading?name={{key}}&reading={{value}}">Editar</a>
+                        </td></td>
                         <td>
                             <a href="http://localhost/del_sensor?name={{key}}"
                                 >Deletar</a

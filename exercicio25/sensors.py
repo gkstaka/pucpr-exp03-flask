@@ -56,7 +56,18 @@ def edit_sensor_form():
     if request.method == "POST":
         new_name = request.form.get('sensor')
         old_name = request.args.get('name')
-        print(old_name)
         info = devices.pop(old_name)
         devices[new_name] = info
+    return redirect("list_sensors")
+
+@sensors.route("/edit_reading")
+def edit_reading():
+    return render_template("edit_reading.html")
+
+@sensors.route("/edit_reading_form", methods=["POST"])
+def edit_reading_form():
+    if request.method == "POST":
+        name = request.args.get("name")
+        reading = request.form.get("reading")
+        devices[name] = reading 
     return redirect("list_sensors")
