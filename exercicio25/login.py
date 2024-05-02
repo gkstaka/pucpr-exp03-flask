@@ -74,7 +74,7 @@ def edit_username_form():
         if new_id not in users.keys():
             info = users.pop(old_id)
             users[new_id] = info
-    return redirect("list_users")
+    return redirect("list_users", privilege=current_app.config["privilege"])
 
 @login.route("/edit_password")
 def edit_password():
@@ -86,7 +86,7 @@ def edit_password_form():
         id = request.args.get('user')
         password = request.form.get('password')
         users[id]["password"]= password
-    return redirect("list_users")
+    return redirect("list_users", privilege=current_app.config["privilege"])
 
 @login.route("/remove_user")
 def remove_user():
