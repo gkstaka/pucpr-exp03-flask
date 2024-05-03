@@ -1,0 +1,25 @@
+<!--register_user.html -->
+{% extends"base.html" %} {% block content%}
+<div class="vertical-center">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-body">
+                    <form action="http://localhost/edit_state_form?name={{request.args.get('name')}}" method="POST">
+                        <p>Novo estado do atuador: </p>
+                        <p>
+                            <input
+                                type="text"
+                                name="state"
+                                placeholder="Estado"
+                                required />
+                        </p>
+                        <p><input type="submit" value="Editar" /></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}
+
