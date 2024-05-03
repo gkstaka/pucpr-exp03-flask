@@ -1,4 +1,4 @@
-from flask import Flask, Blueprint, render_template, request, url_for, current_app, redirect, url_for
+from flask import Flask, Blueprint, render_template, request, url_for, current_app, redirect, url_for, flash
 
 sensors = Blueprint("sensors", __name__, template_folder="templates")
 devices = {
@@ -22,7 +22,10 @@ def add_sensor():
     else:
         sensor = request.args.get("sensor", None)
         reading = request.args.get("reading", None)
-    devices[sensor] = reading
+    if sensor not in devices.keys():
+        devices[sensor] = reading
+    else: 
+        flash("Sensor ja existente")
     return render_template("list_sensors.html", dictionary=devices, dict_type="Sensores", privilege=current_app.config["privilege"])
 
 
@@ -42,9 +45,9 @@ def del_sensor():
     if request.method == "POST":
         sensor = request.form["sensor"]
     else:
-        sensor = request.args.get("sensor", None)
+        sensor = request.args.get("name")
     devices.pop(sensor)
-    return render_template("list_sensors.html", dict_type="Sensores", dictionary=devices, privilege=current_app.config["privilege"])
+    return redirect('list_sensors')
 
 @sensors.route("/edit_sensor")
 def edit_sensor():
