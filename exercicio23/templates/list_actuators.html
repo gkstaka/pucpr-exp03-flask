@@ -1,4 +1,4 @@
-<!--users.html -->
+<!-- list_actuators.html -->
 {% extends"base.html" %} {% block content%}
 <div class="vertical-center">
     <div class="container view">
@@ -23,7 +23,7 @@
                         <td>{{ value }}</td>
                         <td>
                             <a
-                                href="http://localhost/del_user?user={{key}}"
+                                href="http://localhost/del_actuator?actuator={{key}}"
                                 >Deletar</a
                             >
                         </td>
@@ -31,14 +31,14 @@
                     {% endfor %}
                 </tbody>
             </table>
-            <form action="http://localhost:8080/register_user">
-                <p><input type="submit" value="Adicionar Usuário" /></p>
+            <form action="http://localhost/register_actuator">
+                <p><input type="submit" value="Adicionar Atuador" /></p>
             </form>
             {% else %}
-            <p>Ainda não usuários registrados!</p>
+            <p>Ainda não há atuadores registrados!</p>
             <p></p>
-            <form action="http://localhost:8080/register_user">
-                <p><input type="submit" value="Adicionar Usuário" /></p>
+            <form action="http://localhost/register_actuator">
+                <p><input type="submit" value="Adicionar Atuador" /></p>
             </form>
             {% endif %}
         </div>
