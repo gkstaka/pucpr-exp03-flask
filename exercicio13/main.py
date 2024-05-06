@@ -2,10 +2,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-users = {
-    "user1": "1234",
-    "user2": "1234"
-}
+
 rooms = {
     "Quarto": "/bedroom",
     "Banheiro": "/bathroom"
@@ -16,6 +13,10 @@ devices = {
     "Atuadores": "/bedroom/actuators"
 }
 
+users = {
+    "user1": "1234",
+    "user2": "1234"
+}
 
 @app.route("/")
 def login():

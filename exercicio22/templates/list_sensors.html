@@ -23,7 +23,7 @@
                         <td>{{ value }}</td>
                         <td>
                             <a
-                                href="http://localhost/del_user?user={{key}}"
+                                href="http://localhost/del_sensor?sensor={{key}}"
                                 >Deletar</a
                             >
                         </td>
@@ -31,11 +31,11 @@
                     {% endfor %}
                 </tbody>
             </table>
-            <form action="http://localhost:8080/register_user">
+            <form action="http://localhost/register_sensor">
                 <p><input type="submit" value="Adicionar Usuário" /></p>
             </form>
             {% else %}
-            <p>Ainda não usuários registrados!</p>
+            <p>Ainda não ha sensores registrados!</p>
             <p></p>
             <form action="http://localhost:8080/register_user">
                 <p><input type="submit" value="Adicionar Usuário" /></p>
